@@ -1,0 +1,45 @@
+.main {
+  background: linear-gradient(to left top, #eff2ff, #e8ecff);
+  border-radius: 10px;
+  .search {
+    .auto-complete {
+      img {
+        width: 45px;
+        height: 45px;
+        background-color: #744bfc;
+        padding: 10px;
+        border-top-right-radius: 15px !important;
+        border-bottom-right-radius: 15px !important;
+      }
+    }
+    button{
+        background-color: #744BFC !important;
+        border-radius: 39px;
+    }
+  }
+}
+
+::ng-deep {
+  .dx-texteditor {
+    border-top-left-radius: 39px !important;
+    border-bottom-left-radius: 39px !important;
+    input{
+        margin-left: 10px;  
+    }
+  }
+  table{
+    tbody{
+        tr{
+            td{
+                text-align: left !important;
+                .dx-datagrid-text-content{
+                    color: #000000;
+                    font-size: 13px !important;
+                    font-weight: 500;
+                    margin-left: 25px;
+                }
+            }
+        }
+    }
+  }
+}

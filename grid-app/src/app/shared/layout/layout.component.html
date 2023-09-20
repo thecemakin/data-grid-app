@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+<div class="main p-3 mx-4">
+    <div class="search d-flex justify-content-between py-2">
+        <div class="auto-complete d-flex ">
+            <dx-autocomplete
+            [dataSource]="employees"
+        valueExpr="Subject"
+        [grouped]="true"
+        placeholder="Search objects..."
+        >
+    </dx-autocomplete>
+    <!-- <img src="../../../assets/icons/search-bg.png" alt=""> -->
+    <img src="assets/icons/search-icon.png" alt="">    
+    </div>
+<button type="button" class="btn btn-primary">Yeni Hesap Ekle</button>
+</div>
+<div class="d-flex justify-content-center">
+    <dx-data-grid [dataSource]="employees" keyExpr="EmployeeID" width="1200">
+        <dxo-sorting mode="single"> <!-- or "multiple" | "none" --> </dxo-sorting>
+        <dxo-paging [pageSize]="10"> </dxo-paging>
+        <dxo-pager
+        [visible]="true"
+        [allowedPageSizes]="allowedPageSizes"
+        [displayMode]="displayMode"
+        [showPageSizeSelector]="showPageSizeSelector"
+        [showInfo]="showInfo"
+        [showNavigationButtons]="showNavButtons"
+        >
+    </dxo-pager>
+    </dx-data-grid>
+</div>
+</div>
